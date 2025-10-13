@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"  class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Course Catalogue templates</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100 pt-5">
+    <header class="d-flex justify-content-center py-3 fixed-top bg-light">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a href="https://ewp-dashboard.eu" class="nav-link" target="_blank">
+                    EWP Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://occapi.uni-foundation.eu/specification/v2" class="nav-link" target="_blank">
+                    OCCAPI specification
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://uni-foundation.eu" class="nav-link" target="_blank">
+                    European University Foundation
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main class="mt-5 flex-shrink-0">
+        <div class="container">
+            <div class="text-center">
+                <h1>Open Course Catalogue templates</h1>
+                <p class="lead">Prepare your course catalogue data for bulk upload.</p>
+            </div>
+            <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+                <div class="list-group">
+                    <a href="https://github.com/EuropeanUniversityFoundation/dash-cc/blob/occapi_v2/example_csvs/programme_occ_entities_occapi_v2.csv"
+                        class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                        <i class="bi bi-filetype-csv h2 text-success"></i>
+                        <div class="d-flex gap-2 w-100 justify-content-between">
+                            <div>
+                                <h6 class="mb-0">CSV template for Programmes</h6>
+                                <p class="mb-0 opacity-75">
+                                    Includes all fields for Programmes as defined in OCCAPI v2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/EuropeanUniversityFoundation/dash-cc/blob/occapi_v2/example_csvs/course_occ_entities_occapi_v2.csv"
+                        class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                        <i class="bi bi-filetype-csv h2 text-success"></i>
+                        <div class="d-flex gap-2 w-100 justify-content-between">
+                            <div>
+                                <h6 class="mb-0">CSV template for Courses</h6>
+                                <p class="mb-0 opacity-75">
+                                    Includes all fields for Courses as defined in OCCAPI v2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="files/sample.csv" class="list-group-item list-group-item-action d-flex gap-3 py-3 disabled">
+                        <i class="bi bi-filetype-xls h2"></i>
+                        <div class="d-flex gap-2 w-100 justify-content-between">
+                            <div>
+                                <h6 class="mb-0">Complete spreadsheet template</h6>
+                                <p class="mb-0 opacity-75">
+                                    Spreadsheet with validation and instructions for CSV export.
+                                    <br>
+                                    <em>Coming soon...</em>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-body-tertiary text-center">
+        <div class="container">
+            <span class="text-body-secondary">
+                Contact: <a href="mailto:api.support@uni-foundation.eu">
+                    api.support@uni-foundation.eu
+                </a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
