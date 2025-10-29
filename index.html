@@ -38,9 +38,9 @@
         <div class="container">
             <div class="text-center">
                 <h1>Open Course Catalogue templates</h1>
-                <p class="lead">Prepare your course catalogue data for bulk upload.</p>
+                <p class="lead">Download the XLSX spreadsheet, the CSV samples and read on</p>
             </div>
-            <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+            <div class="d-flex flex-column flex-md-row gap-4 pb-md-5 align-items-center justify-content-center">
                 <div class="list-group">
                     <a href="files/DASH_CC_Import_Spreadsheet_2025-10-29.xlsx" class="list-group-item list-group-item-action d-flex gap-3 py-3">
                         <i class="bi bi-filetype-xlsx h2 text-success"></i>
@@ -59,9 +59,9 @@
                         <i class="bi bi-filetype-csv h2 text-success"></i>
                         <div class="d-flex gap-2 w-100 justify-content-between">
                             <div>
-                                <h6 class="mb-0">CSV template for Programmes</h6>
+                                <h6 class="mb-0">CSV sample for Programmes</h6>
                                 <p class="mb-0 opacity-75">
-                                    Includes all fields for Programmes as defined in OCCAPI v2
+                                    A working sample for Programmes. Includes most fields for Programmes as defined in OCCAPI v2
                                 </p>
                             </div>
                         </div>
@@ -71,15 +71,132 @@
                         <i class="bi bi-filetype-csv h2 text-success"></i>
                         <div class="d-flex gap-2 w-100 justify-content-between">
                             <div>
-                                <h6 class="mb-0">CSV template for Courses</h6>
+                                <h6 class="mb-0">CSV sample for Courses</h6>
                                 <p class="mb-0 opacity-75">
-                                    Includes all fields for Courses as defined in OCCAPI v2
+                                    A working sample for Courses. Includes most fields for Courses as defined in OCCAPI v2
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
+            <div class="row gap-4 text-center">
+                <div class="col">
+                    <h1>Quick guide</h1>
+                    <p class="lead">Before you dive in, read these instructions and tips</p>
+                </div>
+            </div>
+            <div class="d-block row align-items-center justify-content-center">
+                <div class="col">
+                    <p><b>Reading this will likely save you time and effort.</b> We will take a closer look at the spreadsheet in this chapter, discuss how to enter (or copy-paste) data, how to export to a CSV and prepare your data for bulk upload.</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Sheets in the Excel workbook</h4>
+                        <p><b>Do not unlock sheeet protection.</b> You will only use the "Programme" and "Course" sheets to enter data. The rest of the spreadsheet should always remain read-only . "Course" and "Programme" sheets are also have protection, to guard validation rules and conditional formatting from being overwritten by pasting content, but you are not prevented from typing and pasting data into them.</p>
+                        <p>The Excel workbook contains following sheets:</p>
+                        <ul>
+                            <li>
+                                <b>"Intro" </b> Contains instructions on how to use the spreadsheet, how to export to CSV and describes the data points present in the sheets below.
+                            </li>
+                            <li>
+                                <b>"Programme" </b> The sheet to enter Programme data into. Contains drop-downs, data validation and conditional formatting to allow checking invalid data by highlighting cells with incorrect values.
+                            </li>
+                            <li>
+                                <b>"Programme - Export" </b> This is a read-only sheet to export Programme data from. It contains automation to gather rows from the Programme sheet, substitute values entered via drop-downs with values the course catalogue system is expecting.
+                            </li>
+                            <li>
+                                <b>"Course" and "Course - Export" </b> Same principle as the "Programme" and "Programme - Export" sheets. Contains tools and validation that should make entering Course data easier and more reliable.
+                            </li>
+                            <li>
+                                <b>"Values - *" </b> Sheets having names prefixed with "Values - " are read-only sheets that match values entered via drop-downs with values the course catalogue system is expecting.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Entering data in the spreadsheet</h4>
+                        <ol>
+                            <li>
+                                Use the Programme and Course Sheets (colored green) to enter or paste your Programme and Course data. Other sheets should remain read-only. They are used to build the sheets to be exported to CSV in the end of the data entry process.
+                            </li>
+                            <li>
+                                In the two editable sheets, columns marked with an asterix (*) after their header names are required data points, make sure to fill them for every record
+                            </li>
+                            <li>
+                                You will be prevented from typing most invalid data by validation rules
+                            </li>
+                            <li>
+                                If you paste rows and columns from other spreadsheets, validation will not prevent entering invalid data, but it will be highlighted (using a red background)
+                            </li>
+                            <li>
+                                Test the whole process with a small set of data first, before doing a mass import
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Exporting data to UTF-8 CSV</h4>
+                        <p>
+                            Once you are done with data entry, you can export the data to a CSV file that can be imported into the course catalogue system.
+                        </p>
+                        <ol>
+                            <li>
+                                Go to the Programmes - Export or Course - Export sheet
+                            </li>
+                            <li>
+                                If you simply use Save as, your original spreadsheet will be referencing the csv file to be created, which comes with a set of problems. Read on to see how to avoid this.
+                            </li>
+                            <li>
+                                Right click on the sheet name and pick "Move or Copy"
+                            </li>
+                            <li>
+                                Use "To book: (new sheet)" and check the "Create a copy" checkbox
+                            </li>
+                            <li>
+                                An Excel file should open in a new window
+                            </li>
+                            <li>
+                                Unprotect the single sheet in the new file (Review > Unprotect Sheet)
+                            </li>
+                            <li>
+                                Select the rows with no data in them up to row 500 by clicking the numbers on their left, right click and choose Delete. This will get rid of the empty data records
+                            </li>
+                            <li>
+                                Save your CSV file again
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Importing to the EWP Dashboard</h4>
+                        <p>
+                            If you have your CSV(s) ready, you can start the import process in the EWP Dashboard.
+                        </p>
+                        <ol>
+                            <li>
+                                Always import Programmes first and Courses after
+                            </li>
+                            <li>
+                                Click on the Course Catalogue menu and pick Programmes or Courses
+                            </li>
+                            <li>
+                                Click on the Import button around the top right corner, browse the file and import it
+                            </li>
+                            <li>
+                                If Programmes or Courses in the spreadsheet already exist with the same code in the Course Catalogue, their data will be updated
+                            </li>
+                            <li>
+                                Validation in the Excel spreadsheet does not cover all cases, so you might have to adjust your data according to the feedback you get on the user interface of the EWP dashboard when attempting to upload the CSV file
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
     <footer class="footer mt-auto py-3 bg-body-tertiary text-center">
