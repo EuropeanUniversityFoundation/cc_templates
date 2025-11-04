@@ -48,7 +48,7 @@
                             <div>
                                 <h6 class="mb-0">Complete spreadsheet template</h6>
                                 <p class="mb-0 opacity-75">
-                                    Spreadsheet for data entry with validation and CSV export
+                                    Spreadsheet for data entry with validation and aid for CSV export
                                     <br>
                                 </p>
                             </div>
@@ -86,7 +86,7 @@
                     <p class="lead">Before you dive in, read these instructions and recommendations</p>
                 </div>
             </div>
-            <div class="d-block row align-items-center justify-content-center">
+            <div class="row">
                 <div class="col">
                     <p>
                         <b>Reading this will likely save you time and effort.</b> We will take a closer look at the spreadsheet in this chapter, discuss how to enter (or copy-paste) data, how to export to a CSV and prepare your data for bulk upload.
@@ -95,6 +95,7 @@
                         <b>Tempting as it may be</b> we advise against uploading the working sample CSVs to give the process a try, because you will have to clean the data from your institutions course catalogue afterwards. They are merely examples of how your importable CSV will look like.
                     </p>
                 </div>
+            </div>
                 <div class="row">
                     <div class="col">
                         <h4>Sheets in the Excel workbook</h4>
@@ -102,7 +103,7 @@
                         <p>The Excel workbook contains following sheets:</p>
                         <ul>
                             <li>
-                                <b>"Intro" </b> Contains instructions on how to use the spreadsheet, how to export to CSV and describes the data points present in the sheets below.
+                                <b>"Intro" </b> Describes the data points present in the sheets below and clarifies some basic concepts related to how the data is structured. Also contains a link to an additional source of information,  the <a href="https://occapi.uni-foundation.eu/specification/v2">OCCAPI v2 specification</a>.
                             </li>
                             <li>
                                 <b>"Programme" </b> The sheet to enter Programme data into. Contains drop-downs, data validation and conditional formatting to allow checking invalid data by highlighting cells with incorrect values.
@@ -124,7 +125,7 @@
                         <h4>Entering data in the spreadsheet</h4>
                         <ol>
                             <li>
-                                Use the <b>Programme</b> and <b>Course</b> Sheets (colored green) to enter or paste your data. <b>Other sheets should remain read-only</b>. They are used to build the sheets to be exported to CSV in the end of the data entry process.
+                                Use the <b>Programme</b> and <b>Course</b> Sheets (colored green) to enter or paste your data. <b>Other sheets should remain read-only</b>. They are used to build the sheets to be exported to CSV in the end of the data entry process. The sheets have validation rules and conditional formatting set  <b>up to row 500</b>.
                             </li>
                             <li>
                                 In the two editable sheets, <b>columns marked with an asterix (*)</b> after their header names <b>are required</b> data points, make sure to fill them for every record
@@ -133,7 +134,7 @@
                                 You will be prevented from typing most invalid data by validation rules
                             </li>
                             <li>
-                                If you paste rows and columns from other spreadsheets, validation will not prevent entering <b>invalid data</b>, but it <b>will be highlighted</b> (using a red background)
+                                If you paste rows and columns from other spreadsheets, validation will not prevent entering <b>invalid data</b>, but it <b>will be highlighted</b> using a red background
                             </li>
                             <li>
                                 <b>Test</b> the whole process <b>with a small set of data</b> first, before doing a mass import
@@ -149,16 +150,16 @@
                         </p>
                         <ol>
                             <li>
-                                Go to the Programmes - Export or Course - Export sheet
+                                Go to the "Programmes - Export" or "Course - Export" sheet
                             </li>
                             <li>
-                                If you simply use Save as, your original spreadsheet will be referencing the csv file to be created, which comes with a set of problems. Read on to see how to avoid this.
+                                If you simply use Save as for the export sheets, your original spreadsheet will be referencing the CSV file you just created, which comes with a set of problems. Read on to see how to avoid this.
                             </li>
                             <li>
                                 Right click on the sheet name and pick <b>"Move or Copy"</b>
                             </li>
                             <li>
-                                Use <b>"To book: (new sheet)"</b> and <b>check the "Create a copy"</b> checkbonew filex
+                                Use <b>"To book: (new sheet)"</b> and <b>check the "Create a copy"</b> checkbox
                             </li>
                             <li>
                                 An Excel file should open in a new window
@@ -167,7 +168,7 @@
                                 <b>Unprotect</b> the single sheet in the <b>new file</b> (Review > Unprotect Sheet)
                             </li>
                             <li>
-                                <b>Select the rows with no data</b> in them up to row 500 by <b>clicking the numbers on their left</b>, right click and choose <b>"Delete"</b>. This will get rid of the empty data records
+                                Since the export sheets have formulas, when exporting, empty rows will appear at the bottom of the CSV. To prevent this <b>select the rows with no data up to row 500 by clicking the numbers on their left</b>, right click and choose <b>"Delete"</b>. This will get rid of rows with empty cells
                             </li>
                             <li>
                                 Save this file using the format <b>CSV UTF-8 (Comma delimited) (*.csv)</b>, using any name
